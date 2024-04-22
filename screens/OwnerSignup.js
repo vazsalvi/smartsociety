@@ -87,11 +87,11 @@ const OwnerSignup = () => {
 
 const styles = StyleSheet.create({
   textTypo: {
-    fontFamily: FontFamily.openSansRegular,
     fontSize: FontSize.size_base,
   },
   textFlexBox: {
-    textAlign: "center",
+    flexDirection: 'row',
+    textAlign: "left",
     lineHeight: 32,
   },
   buttonBgLayout: {
@@ -105,13 +105,11 @@ const styles = StyleSheet.create({
   rental1Typo: {
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
   },
   signUp1Typo: {
     color: Color.white,
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
     position: "absolute",
   },
   nameinputPosition: {
@@ -123,7 +121,6 @@ const styles = StyleSheet.create({
     top: 404,
     fontSize: FontSize.size_base,
     height: 56,
-    fontFamily: FontFamily.openSansRegular,
     overflow: "hidden",
     width: 336,
     left: 12,
@@ -141,13 +138,16 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: FontSize.size_base,
-    fontFamily: FontFamily.openSansRegular,
+    left: 0,
   },
   alreadyHaveAnContainer: {
-    left: 56,
-    top: 691,
-    position: "absolute",
-  },
+      left: 0,
+      right: 0, // Set the right offset to fill the available space
+      top: 691,
+      position: "absolute",
+      justifyContent: "center", // Align children horizontally
+      alignItems: "center", // Align children vertically
+   },
   buttonBg: {
     top: 0,
     left: 0,
@@ -170,18 +170,21 @@ const styles = StyleSheet.create({
     top: 2,
   },
   ownersliderbar: {
-    top: 553,
-    backgroundColor: Color.colorPapayawhip,
-    borderRadius: Border.br_xs,
-    height: 28,
-    left: 13,
-    width: 336,
+      top: 550,
+      flexDirection: "row", // Set the direction to row
+      justifyContent: "space-between", // Distribute items along the main axis (horizontally) with equal space between them
+      alignItems: "center", // Align items along the cross axis (vertically)
+      backgroundColor: Color.colorPapayawhip,
+      borderRadius: Border.br_xs,
+      height: 28,
+      left: 30,
+      width: 336,
+      position: "absolute",
   },
   recidencesinceinput: {
     top: 471,
     fontSize: FontSize.size_base,
     height: 56,
-    fontFamily: FontFamily.openSansRegular,
     overflow: "hidden",
     width: 336,
     left: 12,
@@ -191,7 +194,6 @@ const styles = StyleSheet.create({
     top: 337,
     fontSize: FontSize.size_base,
     height: 56,
-    fontFamily: FontFamily.openSansRegular,
     overflow: "hidden",
     width: 336,
     left: 12,
@@ -200,30 +202,26 @@ const styles = StyleSheet.create({
   emailinput: {
     top: 270,
     fontSize: FontSize.size_base,
-    fontFamily: FontFamily.openSansRegular,
     height: 56,
     overflow: "hidden",
   },
   mobilenumberinput: {
     top: 203,
     fontSize: FontSize.size_base,
-    fontFamily: FontFamily.openSansRegular,
     height: 56,
     overflow: "hidden",
   },
   nameinput: {
     top: 136,
     fontSize: FontSize.size_base,
-    fontFamily: FontFamily.openSansRegular,
     height: 56,
     overflow: "hidden",
   },
   signUp: {
     top: 79,
-    left: 95,
+    left: 150,
     fontSize: FontSize.size_13xl,
     fontWeight: "800",
-    fontFamily: FontFamily.openSansExtraBold,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -235,24 +233,28 @@ const styles = StyleSheet.create({
   smartIndiaSociety: {
     marginLeft: -126,
     top: 52,
-    left: "50%",
+    left: "55%",
     fontSize: FontSize.size_5xl,
     textTransform: "uppercase",
     color: Color.blackPrimary,
     position: "absolute",
   },
-  pressable: {
-    height: "100%",
-    width: "100%",
-    backgroundColor: "transparent",
-  },
   buttonBg1: {
-    top: 612,
-    height: 48,
+      top: 612, // Adjust top position as needed
+      left: 30, // Aligning from the left
+      height: 48, // Adjust height as needed
+      width: 360, // Adjust width as needed
+      position: "absolute",
+  },
+    pressable: {
+        height: "100%",
+        backgroundColor: "transparent",
+        borderRadius: Border.br_xs,
+        width: "100%",
   },
   signUp1: {
     top: 626,
-    left: 148,
+    left: 150,
     width: 66,
     height: 21,
     fontSize: FontSize.size_base,

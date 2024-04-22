@@ -64,10 +64,10 @@ const Signin = () => {
         placeholder="Enter your Name"
         placeholderTextColor="#a6a6a6"
       />
-      <Text style={[styles.signIn, styles.textFlexBox]}>SIGN IN</Text>
-      <Text style={[styles.smartIndiaSociety, styles.signInAs2Typo]}>
-        Smart India Society
+      <Text style={[styles.smartIndiaSociety, styles.smartIndiaSocietyLayout]}>
+              Smart India Society
       </Text>
+      <Text style={[styles.signIn, styles.signInLayout]}>SIGN IN</Text>
     </View>
   );
 };
@@ -84,13 +84,11 @@ const styles = StyleSheet.create({
   signInAs2Typo: {
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
   },
   nameinputLayout: {
     height: 56,
     width: 336,
     left: 14,
-    fontFamily: FontFamily.openSansRegular,
     fontSize: FontSize.size_base,
     position: "absolute",
     overflow: "hidden",
@@ -106,7 +104,6 @@ const styles = StyleSheet.create({
     color: Color.colorOrange_100,
   },
   text: {
-    fontFamily: FontFamily.openSansRegular,
     textAlign: "center",
     lineHeight: 32,
     fontSize: FontSize.size_base,
@@ -141,7 +138,7 @@ const styles = StyleSheet.create({
   primaryButton: {
     top: 365,
     height: 48,
-    width: 336,
+    width: 360,
     left: 14,
     position: "absolute",
   },
@@ -152,11 +149,10 @@ const styles = StyleSheet.create({
     top: 200,
   },
   signIn: {
-    top: 100,
-    left: 96,
+    top: 130,
+    left: 110,
     fontSize: FontSize.size_13xl,
     fontWeight: "800",
-    fontFamily: FontFamily.openSansExtraBold,
     display: "flex",
     justifyContent: "center",
     width: 171,
@@ -168,14 +164,13 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   smartIndiaSociety: {
-    marginLeft: -125,
-    top: 50,
-    left: "50%",
-    fontSize: FontSize.size_5xl,
-    textTransform: "uppercase",
-    color: Color.blackPrimary,
-    position: "absolute",
-  },
+      textAlign: "center",
+      top: 80,
+      fontSize: 36, // Adjust font size as needed
+      fontFamily: "System", // System font
+      textTransform: "uppercase",
+      color: "#000000", // Black color
+    },
   rentalsignin: {
     backgroundColor: Color.white,
     flex: 1,

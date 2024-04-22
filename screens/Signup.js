@@ -110,13 +110,11 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_sm,
     textAlign: "center",
     lineHeight: 24,
-    fontFamily: FontFamily.openSansRegular,
   },
   roomnoinputLayout: {
     height: 56,
     left: 13,
     width: 336,
-    fontFamily: FontFamily.openSansRegular,
     fontSize: FontSize.size_base,
     position: "absolute",
     overflow: "hidden",
@@ -125,7 +123,6 @@ const styles = StyleSheet.create({
     left: 14,
     height: 56,
     width: 336,
-    fontFamily: FontFamily.openSansRegular,
     fontSize: FontSize.size_base,
     position: "absolute",
     overflow: "hidden",
@@ -143,13 +140,12 @@ const styles = StyleSheet.create({
   text: {
     marginLeft: -127,
     textAlign: "left",
-    fontFamily: FontFamily.openSansRegular,
     lineHeight: 32,
     fontSize: FontSize.size_base,
   },
   alreadyHaveAnContainer: {
     top: 690,
-    left: "50%",
+    left: "55%",
     position: "absolute",
   },
   pressable: {
@@ -165,13 +161,12 @@ const styles = StyleSheet.create({
   },
   signUp: {
     top: 625,
-    left: 145,
+    left: 130,
     width: 66,
     height: 21,
     color: Color.white,
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
     fontSize: FontSize.size_base,
   },
   buttonBgIcon: {
@@ -200,7 +195,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorPapayawhip,
     borderRadius: Border.br_xs,
     width: 336,
-    left: 10,
+    left: 30,
   },
   recidencesinceinput: {
     top: 471,
@@ -225,7 +220,6 @@ const styles = StyleSheet.create({
     top: 78,
     fontSize: FontSize.size_13xl,
     fontWeight: "800",
-    fontFamily: FontFamily.openSansExtraBold,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -244,8 +238,7 @@ const styles = StyleSheet.create({
     color: Color.blackPrimary,
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
-    left: "50%",
+    left: "55%",
   },
   rentalregsignup: {
     backgroundColor: Color.white,

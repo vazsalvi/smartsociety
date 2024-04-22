@@ -11,13 +11,13 @@ const Logout = () => {
       <View style={[styles.signout, styles.signoutLayout]}>
         <View style={[styles.signoutChild, styles.signoutLayout]} />
         <Pressable
-          style={[styles.nobutton, styles.nobuttonShadowBox]}
+          style={[styles.nobutton, styles.nobuttonPosition]}
           onPress={() => navigation.navigate("Menu")}
         >
           <Text style={[styles.no, styles.noClr]}>NO</Text>
         </Pressable>
         <Pressable
-          style={[styles.yesbutton, styles.nobuttonShadowBox]}
+          style={[styles.yesbutton, styles.nobuttonPosition]}
           onPress={() => navigation.navigate("Signin")}
         >
           <Text style={[styles.yes, styles.noTypo]}>YES</Text>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     width: 336,
     position: "absolute",
   },
-  nobuttonShadowBox: {
+  nobuttonPosition: {
     justifyContent: "center",
     alignItems: "center",
     height: 35,
@@ -47,7 +47,9 @@ const styles = StyleSheet.create({
       height: 1.373642921447754,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    top: 69,
+    marginTop: 6,
+    left: "50%",
+    top: "50%",
     position: "absolute",
   },
   noClr: {
@@ -78,10 +80,10 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_sm,
   },
   nobutton: {
-    left: 28,
-    borderRadius: 4,
+    marginLeft: -140.15,
     shadowRadius: 6.87,
     elevation: 6.87,
+    borderRadius: 4,
     backgroundColor: Color.white,
   },
   yes: {
@@ -92,22 +94,24 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   yesbutton: {
-    left: 239,
-    borderRadius: 5,
-    backgroundColor: Color.colorOrange_200,
+    marginLeft: 70.45,
     shadowRadius: 8.02,
     elevation: 8.02,
+    borderRadius: 5,
+    backgroundColor: Color.colorOrange_200,
   },
   doYouWant: {
-    top: 31,
-    left: 64,
+    marginTop: -32,
+    marginLeft: -93.15,
     fontSize: FontSize.size_base,
     lineHeight: 24,
     fontFamily: FontFamily.openSansRegular,
     width: 186,
     textAlign: "left",
-    position: "absolute",
+    left: "50%",
+    top: "50%",
     color: Color.colorDimgray,
+    position: "absolute",
   },
   signout: {
     top: 277,

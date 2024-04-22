@@ -40,7 +40,7 @@ const OwnerSignin = () => {
         </Text>
       </Pressable>
       <LinearGradient
-        style={styles.primaryButton}
+        style={[styles.primaryButton, styles.primaryButtonLayout]}
         locations={[0, 0.56, 1]}
         colors={["#e49700", "#e4ce00", "rgba(228, 110, 0, 0.78)"]}
       >
@@ -49,7 +49,7 @@ const OwnerSignin = () => {
           onPress={() => navigation.navigate("Code")}
         >
           <Text style={[styles.signInAs2, styles.signInAs2Typo]}>
-            Sign In as Owner
+                      Sign In as Rental
           </Text>
         </Pressable>
       </LinearGradient>
@@ -66,10 +66,10 @@ const OwnerSignin = () => {
         placeholder="Enter your Name"
         placeholderTextColor="#a6a6a6"
       />
-      <Text style={[styles.signIn, styles.textFlexBox]}>SIGN IN</Text>
-      <Text style={[styles.smartIndiaSociety, styles.signInAs2Typo]}>
+      <Text style={[styles.smartIndiaSociety, styles.smartIndiaSocietyLayout]}>
         Smart India Society
       </Text>
+      <Text style={[styles.signIn, styles.signInLayout]}>SIGN IN</Text>
     </View>
   );
 };
@@ -82,17 +82,18 @@ const styles = StyleSheet.create({
   textFlexBox: {
     textAlign: "center",
     lineHeight: 32,
+    fontFamily: "System", // System font
   },
   signInAs2Typo: {
     lineHeight: 24,
     textAlign: "center",
-    fontFamily: FontFamily.openSansRegular,
+    fontFamily: "System", // System font
   },
   usernameinputLayout: {
     height: 56,
     width: 336,
     left: 12,
-    fontFamily: FontFamily.openSansRegular,
+    fontFamily: "System", // System font
     fontSize: FontSize.size_base,
     position: "absolute",
     overflow: "hidden",
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
     color: Color.colorOrange_100,
   },
   text: {
-    fontFamily: FontFamily.openSansRegular,
+    fontFamily: "System", // System font
     textAlign: "center",
     lineHeight: 32,
     fontSize: FontSize.size_base,
@@ -143,10 +144,11 @@ const styles = StyleSheet.create({
   primaryButton: {
     top: 365,
     height: 48,
-    width: 336,
+    width: 360,
     left: 12,
     position: "absolute",
   },
+
   phonenumberinput: {
     top: 270,
   },
@@ -154,11 +156,11 @@ const styles = StyleSheet.create({
     top: 200,
   },
   signIn: {
-    top: 100,
-    left: 94,
+    top: 130,
+    left: 110,
     fontSize: FontSize.size_13xl,
     fontWeight: "800",
-    fontFamily: FontFamily.openSansExtraBold,
+    fontFamily: "System", // System font
     display: "flex",
     justifyContent: "center",
     width: 171,
@@ -170,13 +172,12 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   smartIndiaSociety: {
-    marginLeft: -127,
-    top: 50,
-    left: "50%",
-    fontSize: FontSize.size_5xl,
+    textAlign: "center",
+    top: 80,
+    fontSize: 36, // Adjust font size as needed
+    fontFamily: "System", // System font
     textTransform: "uppercase",
-    color: Color.blackPrimary,
-    position: "absolute",
+    color: "#000000", // Black color
   },
   ownersignin: {
     backgroundColor: Color.white,

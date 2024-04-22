@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Color, FontFamily, FontSize, Border, Padding } from "../GlobalStyles";
+import { Border, Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const Theme = () => {
   const navigation = useNavigation();
@@ -11,15 +11,15 @@ const Theme = () => {
       <View style={[styles.themeswitch, styles.themeswitchLayout]}>
         <View style={[styles.themeswitchChild, styles.themeswitchLayout]} />
         <Pressable
-          style={[styles.light, styles.darkShadowBox]}
+          style={[styles.light, styles.darkPosition]}
           onPress={() => navigation.navigate("Menu")}
         >
-          <Text style={[styles.light1, styles.light1Clr]}>Light</Text>
+          <Text style={[styles.light1, styles.dark1FlexBox]}>Light</Text>
         </Pressable>
-        <View style={[styles.dark, styles.darkShadowBox]}>
-          <Text style={[styles.dark1, styles.dark1Typo]}>Dark</Text>
+        <View style={[styles.dark, styles.darkPosition]}>
+          <Text style={[styles.dark1, styles.dark1FlexBox]}>Dark</Text>
         </View>
-        <Text style={[styles.switchTheme, styles.light1Clr]}>
+        <Text style={[styles.switchTheme, styles.dark1FlexBox]}>
           Switch theme?
         </Text>
       </View>
@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
     width: 310,
     position: "absolute",
   },
-  darkShadowBox: {
-    justifyContent: "center",
+  darkPosition: {
     height: 35,
     shadowOpacity: 1,
     shadowOffset: {
@@ -42,17 +41,14 @@ const styles = StyleSheet.create({
       height: 1.373642921447754,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    top: 70,
+    top: "50%",
+    marginTop: 7,
+    left: "50%",
     position: "absolute",
   },
-  light1Clr: {
-    color: Color.colorDimgray,
+  dark1FlexBox: {
     textAlign: "left",
-  },
-  dark1Typo: {
-    fontFamily: FontFamily.openSansExtraBold,
-    fontWeight: "800",
-    fontSize: FontSize.size_sm,
+    position: "absolute",
   },
   themeswitchChild: {
     top: 0,
@@ -64,49 +60,48 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   light1: {
+    left: 40,
     lineHeight: 8,
     width: 38,
+    color: Color.colorDimgray,
     textAlign: "left",
-    fontFamily: FontFamily.openSansExtraBold,
     fontWeight: "800",
     fontSize: FontSize.size_sm,
+    top: 13,
   },
   light: {
-    left: 12,
-    borderRadius: 4,
+    marginLeft: -143,
     shadowRadius: 6.87,
     elevation: 6.87,
-    alignItems: "center",
+    borderRadius: 4,
     width: 118,
     backgroundColor: Color.white,
   },
   dark1: {
+    left: 51,
     lineHeight: 10,
     color: Color.white,
-    textAlign: "left",
+    fontWeight: "800",
+    fontSize: FontSize.size_sm,
+    top: 13,
   },
   dark: {
-    left: 167,
-    borderRadius: 5,
-    backgroundColor: Color.blackPrimary,
+    marginLeft: 12,
     shadowRadius: 8.02,
     elevation: 8.02,
+    borderRadius: 5,
+    backgroundColor: Color.blackPrimary,
     width: 137,
-    alignItems: "flex-end",
-    paddingHorizontal: Padding.p_26xl,
-    paddingVertical: 0,
   },
   switchTheme: {
     marginLeft: -46.7,
     top: 31,
-    left: "50%",
     fontSize: FontSize.size_base,
     lineHeight: 24,
-    fontFamily: FontFamily.openSansRegular,
+    color: Color.colorDimgray,
     textAlign: "left",
     width: 118,
-    position: "absolute",
-    color: Color.colorDimgray,
+    left: "50%",
   },
   themeswitch: {
     top: 279,

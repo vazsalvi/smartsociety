@@ -2,169 +2,141 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
+import { Color, FontFamily, Border, FontSize } from "../GlobalStyles";
 
 const Home = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.home}>
-      <View style={styles.header}>
-        <Image
-          style={styles.header}
-          contentFit="cover"
-          source={require("../assets/societyimg3.png")}
-        />
-        <Text style={[styles.smartIndiaSociety, styles.smartTypo]}>
-          Smart India Society
-        </Text>
-        <Text style={[styles.smartIndiaSociety1, styles.smartTypo]}>
-          Smart India Society
-        </Text>
+      <View style={styles.headerWrapper}>
+        <View style={styles.headerWrapper}>
+          <Image
+            style={styles.headerWrapper}
+            contentFit="cover"
+            source={require("../assets/societyimg3.png")}
+          />
+          <Text style={[styles.smartIndiaSociety, styles.smartTypo]}>
+            Smart India Society
+          </Text>
+          <Text style={[styles.smartIndiaSociety1, styles.smartTypo]}>
+            Smart India Society
+          </Text>
+        </View>
       </View>
-      <Pressable
-        style={[styles.member, styles.memberLayout]}
-        onPress={() => navigation.navigate("Member1")}
-      >
-        <View style={styles.childShadowBox3} />
-        <Text style={[styles.members, styles.voteUpTypo]}>Members</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt0,
-            styles.meteoconslightningboltPosition4,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <View style={[styles.maintenance, styles.memberLayout]}>
-        <View style={styles.childShadowBox3} />
-        <Text style={[styles.maintenance1, styles.voteUpTypo]}>
-          Maintenance
-        </Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt01,
-            styles.meteoconslightningboltPosition3,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon1, styles.vectorIconPosition]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
+      <View style={[styles.memberWrapper, styles.wrapperPosition3]}>
+        <Pressable
+          style={[styles.member, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("Member1")}
+        >
+          <View style={[styles.memberChild, styles.childShadowBox]} />
+          <Text style={[styles.members, styles.membersTypo]}>Members</Text>
+          <Image
+            style={[styles.vectorIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
       </View>
-      <Pressable
-        style={[styles.voteup, styles.voteupLayout]}
-        onPress={() => navigation.navigate("Events1")}
-      >
-        <View style={styles.childShadowBox2} />
-        <Text style={[styles.voteUp, styles.voteUpTypo]}>Vote Up</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt02,
-            styles.meteoconslightningboltPosition2,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon2, styles.vectorIconLayout2]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <Pressable
-        style={[styles.emergencey, styles.voteupLayout]}
-        onPress={() => navigation.navigate("Emergency")}
-      >
-        <View style={styles.childShadowBox2} />
-        <Text style={[styles.emergency, styles.voteUpTypo]}>Emergency</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt03,
-            styles.meteoconslightningboltPosition2,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon3, styles.vectorIconLayout2]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <Pressable
-        style={[styles.events, styles.eventsLayout]}
-        onPress={() => navigation.navigate("Events")}
-      >
-        <View style={styles.childShadowBox1} />
-        <Text style={[styles.events1, styles.events1Typo]}>Events</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt04,
-            styles.meteoconslightningboltPosition1,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon4, styles.vectorIconLayout1]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <Pressable
-        style={[styles.complaints, styles.eventsLayout]}
-        onPress={() => navigation.navigate("COMPLAINTS")}
-      >
-        <View style={styles.childShadowBox1} />
-        <Text style={[styles.complaints1, styles.events1Typo]}>Complaints</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt05,
-            styles.meteoconslightningboltPosition1,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon5, styles.vectorIconLayout1]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <Pressable
-        style={[styles.notice, styles.billsLayout]}
-        onPress={() => navigation.navigate("Notice")}
-      >
-        <View style={styles.childShadowBox} />
-        <Text style={[styles.notice1, styles.bills1Typo]}>Notice</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt06,
-            styles.meteoconslightningboltPosition,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon6, styles.vectorIconLayout]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
-      <Pressable
-        style={[styles.bills, styles.billsLayout]}
-        onPress={() => navigation.navigate("Bills")}
-      >
-        <View style={styles.childShadowBox} />
-        <Text style={[styles.bills1, styles.bills1Typo]}>Bills</Text>
-        <View
-          style={[
-            styles.meteoconslightningbolt07,
-            styles.meteoconslightningboltPosition,
-          ]}
-        />
-        <Image
-          style={[styles.vectorIcon7, styles.vectorIconLayout]}
-          contentFit="cover"
-          source={require("../assets/meteoconslightningbolt08.png")}
-        />
-      </Pressable>
+      <View style={[styles.maintenanceWrapper, styles.wrapperPosition3]}>
+        <View style={[styles.member, styles.memberChildLayout]}>
+          <View style={[styles.maintenanceChild, styles.childShadowBox]} />
+          <Text style={[styles.maintenance1, styles.membersTypo]}>
+            Maintenance
+          </Text>
+          <Image
+            style={[styles.vectorIcon1, styles.vectorIconPosition]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </View>
+      </View>
+      <View style={[styles.voteupWrapper, styles.wrapperPosition2]}>
+        <Pressable
+          style={[styles.voteup, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("Events1")}
+        >
+          <View style={[styles.voteupChild, styles.childShadowBox]} />
+          <Text style={[styles.members, styles.membersTypo]}>Vote Up</Text>
+          <Image
+            style={[styles.vectorIcon2, styles.vectorIconLayout1]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
+      </View>
+      <View style={[styles.emergenceyWrapper, styles.wrapperPosition2]}>
+        <Pressable
+          style={[styles.voteup, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("Emergency")}
+        >
+          <View style={[styles.emergenceyChild, styles.childShadowBox]} />
+          <Text style={[styles.emergency, styles.events1Typo]}>Emergency</Text>
+          <Image
+            style={[styles.vectorIcon3, styles.vectorIconLayout1]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
+      </View>
+      <View style={[styles.eventsWrapper, styles.wrapperPosition1]}>
+        <Pressable
+          style={[styles.events, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("Events")}
+        >
+          <View style={[styles.eventsChild, styles.childShadowBox]} />
+          <Text style={[styles.events1, styles.events1Typo]}>Events</Text>
+          <Image
+            style={[styles.vectorIcon4, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
+      </View>
+      <View style={[styles.complaintsWrapper, styles.wrapperPosition1]}>
+        <Pressable
+          style={[styles.events, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("COMPLAINTS")}
+        >
+          <View style={[styles.complaintsChild, styles.childShadowBox]} />
+          <Text style={[styles.complaints1, styles.membersTypo]}>
+            Complaints
+          </Text>
+          <Image
+            style={[styles.vectorIcon5, styles.vectorIconPosition]}
+            contentFit="cover"
+            source={require("../assets/vector1.png")}
+          />
+        </Pressable>
+      </View>
+      <View style={[styles.noticeWrapper, styles.wrapperPosition]}>
+        <Pressable
+          style={[styles.notice, styles.memberChildLayout]}
+          onPress={() => navigation.navigate("Notice")}
+        >
+          <View style={[styles.noticeChild, styles.childShadowBox]} />
+          <Text style={[styles.members, styles.membersTypo]}>Notice</Text>
+          <Image
+            style={[styles.vectorIcon6, styles.vectorIconLayout]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
+      </View>
+      <View style={[styles.billsWrapper, styles.wrapperPosition]}>
+        <Pressable
+          style={[styles.bills, styles.billsPosition]}
+          onPress={() => navigation.navigate("Bills")}
+        >
+          <View style={[styles.billsChild, styles.billsPosition]} />
+          <Text style={[styles.complaints1, styles.membersTypo]}>Bills</Text>
+          <Image
+            style={[styles.vectorIcon7, styles.vectorIconLayout]}
+            contentFit="cover"
+            source={require("../assets/meteoconslightningbolt08.png")}
+          />
+        </Pressable>
+      </View>
       <Pressable
         style={styles.drawer}
         onPress={() => navigation.navigate("Menu")}
@@ -186,154 +158,142 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.openSansExtraBold,
     fontWeight: "800",
     textTransform: "uppercase",
-    left: "50%",
     lineHeight: 24,
+    left: "50%",
+    top: "50%",
     position: "absolute",
   },
-  memberLayout: {
+  wrapperPosition3: {
     height: 112,
     width: 150,
-    top: 521,
+    marginTop: 167.3,
+    left: "50%",
+    top: "50%",
     position: "absolute",
   },
-  voteUpTypo: {
+  memberChildLayout: {
+    height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+  },
+  childShadowBox: {
+    backgroundColor: Color.white,
+    borderRadius: Border.br_2xl,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.1)",
+  },
+  membersTypo: {
     color: Color.colorDimgray,
     fontSize: FontSize.size_base,
+    top: 23,
     textAlign: "center",
     fontFamily: FontFamily.openSansExtraBold,
     fontWeight: "800",
+    lineHeight: 24,
     position: "absolute",
-  },
-  meteoconslightningboltPosition4: {
-    left: "9.47%",
-    right: "83.8%",
   },
   iconLayout: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
   },
-  meteoconslightningboltPosition3: {
-    left: "8.93%",
-    right: "84.33%",
-  },
   vectorIconPosition: {
     left: "8.67%",
     right: "84.67%",
   },
-  voteupLayout: {
+  wrapperPosition2: {
     height: 99,
-    top: 421,
+    marginTop: 67.3,
     width: 150,
+    left: "50%",
+    top: "50%",
     position: "absolute",
-  },
-  meteoconslightningboltPosition2: {
-    bottom: "82.98%",
-    height: "17.02%",
-    top: "0%",
-    width: "6.73%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  vectorIconLayout2: {
-    bottom: "25.33%",
-    top: "55.42%",
-    height: "19.25%",
-    maxHeight: "100%",
-    maxWidth: "100%",
-    width: "6.67%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  eventsLayout: {
-    height: 86,
-    top: 321,
-    width: 150,
-    position: "absolute",
-  },
-  events1Typo: {
-    top: 39,
-    color: Color.colorDimgray,
-    fontSize: FontSize.size_base,
-    textAlign: "center",
-    fontFamily: FontFamily.openSansExtraBold,
-    fontWeight: "800",
-    lineHeight: 24,
-    position: "absolute",
-  },
-  meteoconslightningboltPosition1: {
-    bottom: "80.4%",
-    height: "19.6%",
-    top: "0%",
-    width: "6.73%",
-    position: "absolute",
-    overflow: "hidden",
   },
   vectorIconLayout1: {
-    bottom: "28%",
-    top: "49.82%",
-    height: "22.17%",
+    bottom: "35.71%",
+    top: "37.14%",
     maxHeight: "100%",
     maxWidth: "100%",
     width: "6.67%",
+    height: "27.14%",
     position: "absolute",
     overflow: "hidden",
   },
-  billsLayout: {
-    height: 73,
-    top: 221,
-    width: 150,
-    position: "absolute",
-  },
-  bills1Typo: {
-    top: 26,
+  events1Typo: {
+    left: 33,
     color: Color.colorDimgray,
     fontSize: FontSize.size_base,
     textAlign: "center",
     fontFamily: FontFamily.openSansExtraBold,
     fontWeight: "800",
-    lineHeight: 24,
     position: "absolute",
   },
-  meteoconslightningboltPosition: {
-    bottom: "76.92%",
-    height: "23.08%",
-    top: "0%",
-    width: "6.73%",
+  wrapperPosition1: {
+    height: 86,
+    width: 150,
+    left: "50%",
+    top: "50%",
     position: "absolute",
-    overflow: "hidden",
+  },
+  wrapperPosition: {
+    height: 73,
+    marginTop: -132.7,
+    width: 150,
+    left: "50%",
+    top: "50%",
+    position: "absolute",
   },
   vectorIconLayout: {
-    bottom: "31.59%",
-    top: "42.31%",
-    height: "26.1%",
+    bottom: "32.86%",
+    top: "40%",
     maxHeight: "100%",
     maxWidth: "100%",
     width: "6.67%",
+    height: "27.14%",
     position: "absolute",
     overflow: "hidden",
   },
-  header: {
-    top: 0,
+  billsPosition: {
+    marginLeft: -75,
+    height: 70,
+    width: 150,
+    left: "50%",
+    top: "50%",
+    position: "absolute",
+  },
+  headerWrapper: {
     width: 450,
     height: 178,
     left: 0,
+    top: 0,
     position: "absolute",
   },
   smartIndiaSociety: {
+    marginTop: 1,
     marginLeft: -208.4,
-    top: 90,
     fontSize: FontSize.size_5xl,
     width: 338,
   },
   smartIndiaSociety1: {
+    marginTop: -61,
     marginLeft: -124.6,
-    top: 28,
     fontSize: FontSize.size_xs,
     width: 169,
   },
-  childShadowBox3: {
+  memberChild: {
     height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
     shadowOpacity: 1,
     elevation: 4,
     shadowRadius: 4,
@@ -342,70 +302,65 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    backgroundColor: Color.white,
-    borderRadius: Border.br_2xl,
-    top: 42,
-    width: 150,
-    left: 0,
-    position: "absolute",
   },
   members: {
     left: 32,
-    top: 65,
-    fontSize: FontSize.size_base,
-    lineHeight: 24,
-  },
-  meteoconslightningbolt0: {
-    bottom: "84.96%",
-    top: "0%",
-    width: "6.73%",
-    height: "15.04%",
-    position: "absolute",
-    overflow: "hidden",
   },
   vectorIcon: {
     left: "9.33%",
     right: "84%",
-    bottom: "23.28%",
-    top: "59.71%",
-    width: "6.67%",
-    height: "17.01%",
+    bottom: "37.14%",
+    top: "35.71%",
     maxWidth: "100%",
+    width: "6.67%",
+    height: "27.14%",
     position: "absolute",
   },
   member: {
-    left: 188,
+    top: 42,
+  },
+  memberWrapper: {
+    marginLeft: 6,
+  },
+  maintenanceChild: {
+    height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.1)",
   },
   maintenance1: {
     left: 30,
-    top: 65,
-    fontSize: FontSize.size_base,
-    lineHeight: 24,
-  },
-  meteoconslightningbolt01: {
-    bottom: "84.96%",
-    top: "0%",
-    width: "6.73%",
-    height: "15.04%",
-    position: "absolute",
-    overflow: "hidden",
   },
   vectorIcon1: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
-    bottom: "23.28%",
-    top: "59.71%",
+    bottom: "37.14%",
+    top: "35.71%",
     width: "6.67%",
-    height: "17.01%",
+    height: "27.14%",
     position: "absolute",
   },
-  maintenance: {
-    left: 22,
+  maintenanceWrapper: {
+    marginLeft: -160,
   },
-  childShadowBox2: {
-    top: 29,
+  voteupChild: {
     height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
     shadowOpacity: 1,
     elevation: 4,
     shadowRadius: 4,
@@ -414,49 +369,52 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    backgroundColor: Color.white,
-    borderRadius: Border.br_2xl,
-    width: 150,
-    left: 0,
-    position: "absolute",
-  },
-  voteUp: {
-    top: 52,
-    left: 32,
-    lineHeight: 24,
-    fontSize: FontSize.size_base,
-  },
-  meteoconslightningbolt02: {
-    left: "9.47%",
-    right: "83.8%",
   },
   vectorIcon2: {
     left: "9.33%",
     right: "84%",
   },
   voteup: {
-    left: 188,
+    top: 29,
+  },
+  voteupWrapper: {
+    marginLeft: 6,
+  },
+  emergenceyChild: {
+    height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.1)",
   },
   emergency: {
-    top: 56,
+    top: 27,
     lineHeight: 16,
     width: 98,
-    left: 33,
-  },
-  meteoconslightningbolt03: {
-    left: "8.93%",
-    right: "84.33%",
   },
   vectorIcon3: {
     left: "8.67%",
     right: "84.67%",
   },
-  emergencey: {
-    left: 22,
+  emergenceyWrapper: {
+    marginLeft: -160,
   },
-  childShadowBox1: {
-    top: 16,
+  eventsChild: {
     height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
     shadowOpacity: 1,
     elevation: 4,
     shadowRadius: 4,
@@ -465,43 +423,69 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    backgroundColor: Color.white,
-    borderRadius: Border.br_2xl,
+  },
+  events1: {
+    top: 23,
+    left: 33,
+    lineHeight: 24,
+  },
+  vectorIcon4: {
+    top: "38.57%",
+    bottom: "34.29%",
+    left: "9.33%",
+    right: "84%",
+    width: "6.67%",
+    maxWidth: "100%",
+    position: "absolute",
+    height: "27.14%",
+  },
+  events: {
+    top: 16,
+  },
+  eventsWrapper: {
+    marginTop: -32.7,
+    marginLeft: 6,
+  },
+  complaintsChild: {
+    height: 70,
     width: 150,
     left: 0,
     position: "absolute",
-  },
-  events1: {
-    left: 33,
-  },
-  meteoconslightningbolt04: {
-    left: "9.47%",
-    right: "83.8%",
-  },
-  vectorIcon4: {
-    left: "9.33%",
-    right: "84%",
-  },
-  events: {
-    left: 188,
+    top: 0,
+    borderRadius: Border.br_2xl,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.1)",
   },
   complaints1: {
     left: 34,
   },
-  meteoconslightningbolt05: {
-    left: "8.93%",
-    right: "84.33%",
-  },
   vectorIcon5: {
-    left: "8.67%",
-    right: "84.67%",
+    height: "27.29%",
+    top: "38.71%",
+    bottom: "34%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
+    width: "6.67%",
+    position: "absolute",
   },
-  complaints: {
-    left: 22,
+  complaintsWrapper: {
+    marginTop: -33,
+    marginLeft: -160,
   },
-  childShadowBox: {
-    top: 3,
+  noticeChild: {
     height: 70,
+    width: 150,
+    left: 0,
+    position: "absolute",
+    top: 0,
+    borderRadius: Border.br_2xl,
     shadowOpacity: 1,
     elevation: 4,
     shadowRadius: 4,
@@ -510,39 +494,39 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowColor: "rgba(0, 0, 0, 0.1)",
-    backgroundColor: Color.white,
-    borderRadius: Border.br_2xl,
-    width: 150,
-    left: 0,
-    position: "absolute",
-  },
-  notice1: {
-    left: 32,
-  },
-  meteoconslightningbolt06: {
-    left: "9.47%",
-    right: "83.8%",
   },
   vectorIcon6: {
     left: "9.33%",
     right: "84%",
   },
   notice: {
-    left: 188,
+    top: 3,
   },
-  bills1: {
-    left: 34,
+  noticeWrapper: {
+    marginLeft: 6,
   },
-  meteoconslightningbolt07: {
-    left: "8.93%",
-    right: "84.33%",
+  billsChild: {
+    marginTop: -35,
+    backgroundColor: Color.white,
+    borderRadius: Border.br_2xl,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.1)",
   },
   vectorIcon7: {
     left: "8.67%",
     right: "84.67%",
   },
   bills: {
-    left: 22,
+    marginTop: -33.6,
+  },
+  billsWrapper: {
+    marginLeft: -160,
   },
   icon: {
     height: "100%",
