@@ -66,3 +66,7 @@ Collaborated on data models and future backend planning
 
 👤 Author
 Made with ❤️ by Salvi Vaz
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
